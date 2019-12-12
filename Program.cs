@@ -9,10 +9,10 @@ namespace battleships
     {
       Console.WriteLine("Start");
 
-      Ship[] ships = Game.GenerateShips();
+      Ship[] ships = Board.GenerateShips();
 
-      int[,] board = Game.PlaceShipsOneByOne(1, ships, ships);
-      Console.WriteLine(Game.BoardToString(board));
+      int[,] board = Board.PlaceShipsOneByOne(1, ships, ships);
+      Console.WriteLine(Board.BoardToString(board));
     }
   }
 }

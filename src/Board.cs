@@ -5,15 +5,10 @@ using System.Linq;
 
 namespace battleships
 {
-  class Game
+  class Board
   {
     static int size = 10;
     static int attempsPerShip = 100;
-    public int[,] Board = new int[size, size]; // 0 - nothing, 1 - first player, 2 - second player, 3 - both
-    public Game()
-    {
-
-    }
 
     public static (Result, int[,]) PlaceShip(int[,] board, int player, Ship ship)
     {
@@ -31,8 +26,6 @@ namespace battleships
                 var yr = Math.Min(Math.Max(y + yi, 0), size - 1);
                 restrictedBoard[yr, xr] = 1;
               }
-
-      // Debug.Print(BoardToString(restrictedBoard));
 
 
       for (int i = 0; i < ship.length; i++)

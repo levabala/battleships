@@ -9,8 +9,8 @@ namespace battleshipsTest
     [Test, Timeout(2000)]
     public void PlaceShipsOneByOneTest()
     {
-      Ship[] ships = Game.GenerateShips();
-      int[,] board = Game.PlaceShipsOneByOne(1, ships, ships);
+      Ship[] ships = Board.GenerateShips();
+      int[,] board = Board.PlaceShipsOneByOne(1, ships, ships);
     }
   }
 }
