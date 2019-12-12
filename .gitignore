@@ -148,4 +148,4 @@ tools/offsets-tool-py/clang/__pycache__
 
 .packages
 artifacts
-.dotnet
+.dotnet./
